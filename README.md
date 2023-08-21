@@ -34,7 +34,9 @@ password: changeme
 
 Obs. Todos os containers devem estar na mesma rede que o Nginx
 
-
+```
 docker run -d --name=website --network=nginx --restart=always mcr.microsoft.com/dotnet/samples:aspnetapp
-
+```
+```
 docker run -d -p 8000:8000/tcp -p 9443:9443/tcp --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+```
